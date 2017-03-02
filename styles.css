@@ -1,1 +1,17 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
 
+h1 {
+	font-family: "Arvo", serif;
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 16px;
+}
