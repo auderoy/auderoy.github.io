@@ -4,10 +4,11 @@ body {
 }
 
 h1 {
-	font-family: "Arvo", serif;
-	font-weight: 700;
+	font-family: "Futura", serif;
+	font-weight: bold;
 	font-size: 24px;
 	text-transform: uppercase;
+	letter-spacing: 3px;
 }
 
 h2 {
