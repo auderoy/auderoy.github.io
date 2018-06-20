@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  
-  <head>
-    
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Arvo:400,400i,700,700i" rel="stylesheet"> <!-- FONTS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!-- SOCIAL ICONS -->
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
-    
-    <ul>
-      <li><a href="#navigation">navigation</a></li>
-    </ul>
-    
-    <title>Audrey Lin</title>
-    
-  </head>
-  
-  <body>
-    
-    <!-- BODY CONTENT HERE -->
 
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
-    <p>Paragraph</p>
-    
-  </body>
-  
-<html>
+<!-- ............... HEAD ............... -->
+
+<head>
+
+<title>Audrey Lin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Roboto -->
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Playfair+Display -->
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- FAVICON -->
+<!-- https://favicon.io/emoji-favicons -->
+<!-- https://stackoverflow.com/questions/9943771/adding-a-favicon-to-a-static-html-page -->
+<link rel="shortcut icon" type="image/png" href="files/favicon.png"/>
+
+<!-- CSS STYLES -->
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> --> <!-- IMPORT CSS FROM W3SCHOOLS -->
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<!-- ............... BODY ............... -->
+
+<body>
+
+<nav>
+  <ul style="padding-left: 16px">
+    <li><a href="index.html" class="nav-item" style="font-weight:700;">Audrey Lin</a></li>
+    <li><a href="resume.html" class="nav-item">Resume</a></li>
+    <li class="dropdown"><a href="portfolio.html" class="nav-item">Portfolio</a>
+      <ul class="dropdown-content">
+        <li><a href="portfolio/ux.html">Experience design</a></li>
+        <li><a href="portfolio/graphics.html">Graphic design</a></li>
+        <li><a href="portfolio/photos.html">Photography</a></li>
+      </ul>
+    </li>
+    <li style="float:right; padding-right: 3em"><a href="mailto:auderoylin@gmail.com?Subject=Hello%20from%20your%20website" target="_top"><i class="fa fa-envelope"></i></a></li>
+    <li style="float:right;"><a href="https://www.linkedin.com/in/audrey-lin/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+  </ul>
+</nav>
+
+<div id="index-center">
+<div id="index-container">
+  <div id="index-image">
+  <div id="index-image-inner">
+    <img src="files/profile.jpg">
+  </div>
+  </div>
+  <div id="index-intro">
+  <div id="index-intro-inner">
+    <h1>Hi, I'm Audrey.</h1>
+    <p>I've lived in Los Angeles, Beijing, and Philadelphia.</p>
+    <p>I've recently graduated from Bryn Mawr College with a double major in computer science and linguistics.</p>
+    <p>I tell stories through design, writing, and photography.</p>
+    <p>For tidbits from my life, check out my personal lifestyle blog:</br><a href="http://brunchataudreys.com" target="_blank">Brunch at Audrey's</a>.</p>
+  </div>
+  </div>
+</div>
+</div>
+
+</body>
+
+</html>
