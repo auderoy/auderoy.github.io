@@ -1,42 +1,521 @@
-body {
-	font-family: "Open Sans", sans-serif;
+html, body {
+	font-family: Roboto;
+    height: 100%;
+    /* Horz & vert center https://css-tricks.com/centering-css-complete-guide/ */
+}
+
+/* NAVIGATION https://www.w3schools.com/Css/css_navbar.asp */
+
+nav {
+	width: 100%;
 	margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    /*overflow: hidden;*/
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 8px 16px;
+}
+
+nav a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* DROPDOWN https://www.w3schools.com/Css/tryit.asp?filename=trycss_dropdown_navbar */
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+	margin-top: 8px;
+	padding: 0;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    /* filter: drop-shadow(0px 8px 16px rgba(0,0,0,0.2)); */ /* http://bricss.net/post/33158273857/box-shadow-vs-filter-drop-shadow */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+.dropdown-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* DROPDOWN TRIANGLE https://stackoverflow.com/questions/29790831/css-placing-an-arrow-triangle-with-border-on-the-top-of-my-drop-down-menu */
+
+/*
+.dropdown-content:before {
+    content:"";
+    position: absolute;
+    left: 11px;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #f9f9f9 transparent;
+    z-index:9999;
+}
+
+.dropdown-content:after {
+    content:"";
+    position: absolute;
+    left: 4px;
+    top: -22px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 17px 17px 17px;
+    border-color: transparent transparent transparent transparent;
+    z-index:9998;
+}
+*/
+
+/* INDEX */
+
+#index-center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#index-container {
+    width: 75%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#index-image {
+    width: 40%;
+    float: left;
+}
+
+#index-image img {
+    width: 100%;
+}
+
+#index-intro {
+    width: 60%;
+    float: left;
+}
+
+/* Padding without affecting height/width https://stackoverflow.com/questions/2225585/how-to-change-a-div-padding-without-affecting-the-width-height */
+
+#index-intro-inner {
+    padding: 1em;
+    text-align: justify;
+}
+
+#index-intro-inner a {
+    text-decoration: none;
+    color: inherit;
+    background-image: linear-gradient(#F6EBE2, #F6EBE2);
+    background-origin: 0;
+    background-size: 200% 50%;
+    background-repeat: repeat-x;
+    background-position: -100% 100%;
+    transition: background-size 0.2s linear;
+}
+
+#index-intro-inner a:hover {
+    background-size: 200% 100%;
 }
 
 h1 {
-	font-family: "Futura", serif;
-	font-weight: bold;
-	font-size: 24px;
-	text-transform: uppercase;
-	letter-spacing: 7px;
+    font-family: 'Playfair Display', serif;
 }
 
-h2 {
-	font-size: 20px;
-	text-transform: uppercase;
-	letter-spacing: 3px;
+/* RESUME */
+
+#resume-container {
+    margin: 100px auto;
+    width: 75%;
 }
 
-h3 {
-	text-transform: uppercase;
-	font-size: 16px;
-	letter-spacing: 3px;
+.resume-section {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    margin: 0.83em 0;
 }
 
-h4 {
-	font-weight: normal;
-	text-transform: uppercase;
-	font-size: 14px;
-	letter-spacing: 3px;
+.resume-title {
+    display: inline-block;
+    font-size: 1.17em;
+    font-weight: bold;
 }
 
-h5 {
-	font-weight: normal;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+/* Half height highlight https://codepen.io/JesmoDrazik/pen/ZWBdqq */
+
+.resume-title a, .resume-desc a {
+    text-decoration: none;
+    color: inherit;
+    background-image: linear-gradient(#F6EBE2, #F6EBE2);
+    background-origin: 0;
+    background-size: 200% 50%;
+    background-repeat: repeat-x;
+    background-position: -100% 100%;
+    transition: background-size 0.2s linear;
 }
 
-h6 {
-	font-weight: normal;
-	text-transform: uppercase;
+.resume-title a:hover, .resume-desc a:hover {
+    background-size: 200% 100%;
+}
+
+.resume-location {
+    display: inline-block;
+    font-style: italic;
+}
+
+.resume-date {
+    display: inline-block;
+    float: right;
+}
+
+.resume-desc {
+
+}
+
+/* CONTACT */
+
+#contact-center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+#contact-container {
+    width: 75%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* PORTFOLIO */
+
+/* Color scheme https://www.design-seeds.com/wander/wanderlust/color-view-99/ */
+/* Hex to RGB https://www.webpagefx.com/web-design/hex-to-rgb/ */
+/* RGBA CSS https://www.w3schools.com/css/css3_colors.asp */
+
+#portfolio-center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#portfolio-container {
+    width: 75%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+}
+
+#portfolio-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#portfolio-one {
+    width: 250px;
+    height: 250px;
+    float: left;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #A1C6C1;*/
+    background-color: rgb(161,198,193,0.5);
+    transition: background-color 0.5s linear;
+
+}
+
+#portfolio-two {
+    width: 250px;
+    height: 250px;
+    float: left;
+    padding: 1em;
+    margin: 0 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #E2A596;*/
+    background-color: rgb(236,220,185,0.5);
+    transition: background-color 0.5s linear;
+}
+
+#portfolio-three {
+    width: 250px;
+    height: 250px;
+    float: left;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #ECDCB9;*/
+    background-color: rgb(226,165,150,0.5);
+    transition: background-color 0.5s linear;
+}
+
+#portfolio-one:hover {
+    background-color: rgb(161,198,193,1);
+}
+
+#portfolio-two:hover {
+    background-color: rgb(236,220,185,1);
+}
+
+#portfolio-three:hover {
+    background-color: rgb(226,165,150,1);
+}
+
+/* UX */
+
+#ux-center {
+    display: flex;
+    justify-content: center;
+}
+
+#ux-container {
+    width: 75%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ux-item {
+    width: 33%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#ux-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#ux-item-inner {
+    padding: 1em;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(161,198,193,0.5);
+    transition: background-color 0.5s linear;
+}
+
+#ux-item-inner:hover {
+    background-color: rgb(161,198,193,1);
+}
+
+/* UX PROJECTS */
+
+#uxproj-container {
+    margin: 100px auto;
+    width: 75%;
+}
+
+#uxproj-title {
+    text-align: center;
+}
+
+#uxproj-desc {
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: justify;
+}
+
+#uxproj-container iframe {
+    width: 100%;
+    height: 500px;
+}
+
+#uxproj-container img {
+    width: 100%;
+}
+
+.uxproj-1column {
+    width: 100%;
+    float: left;
+    padding-bottom: .5em;
+}
+
+.uxproj-2column {
+    width: 50%;
+    float: left;
+    padding-bottom: .5em;
+}
+
+.uxproj-3column {
+    width: 33%;
+    float: left;
+    padding-bottom: .5em;
+}
+
+.uxproj-1column-inner, .uxproj-2column-inner, .uxproj-3column-inner {
+    padding: .5em;
+}
+
+.uxproj-1column-inner img, .uxproj-2column-inner img, .uxproj-3column-inner img {
+    width: 100%;
+}
+
+.uxproj-material {
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* GRAPHICS */
+
+#graphics-center {
+    display: flex;
+    justify-content: center;
+}
+
+#graphics-container {
+    width: 75%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#graphics-item {
+    width: 33%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#graphics-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#graphics-item-inner {
+    padding: 1em;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236,220,185,0.5);
+    transition: background-color 0.5s linear;
+}
+
+#graphics-item-inner:hover {
+    background-color: rgb(236,220,185,1);
+}
+
+/* PHOTOS */
+
+#photos-center {
+    display: flex;
+    justify-content: center;
+}
+
+#photos-container {
+    width: 75%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#photos-item {
+    width: 33%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#photos-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#photos-item-inner {
+    padding: 1em;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226,165,150,0.5);
+    transition: background-color 0.5s linear;
+}
+
+#photos-item-inner:hover {
+    background-color: rgb(226,165,150,1);
+}
+
+/* PHOTOS PROJECTS */
+
+#photosproj-container {
+    margin: 100px auto;
+    width: 75%;
+}
+
+#photosproj-title {
+    text-align: center;
+}
+
+#photosproj-desc {
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: justify;
+}
+
+#photosproj-container img {
+    width: 100%;
 }
