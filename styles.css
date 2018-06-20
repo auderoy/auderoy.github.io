@@ -406,6 +406,21 @@ h1 {
     text-transform: uppercase;
 }
 
+.uxproj-material a {
+    text-decoration: none;
+    color: inherit;
+    background-image: linear-gradient(#F6EBE2, #F6EBE2);
+    background-origin: 0;
+    background-size: 200% 50%;
+    background-repeat: repeat-x;
+    background-position: -100% 100%;
+    transition: background-size 0.2s linear;
+}
+
+.uxproj-material a:hover {
+    background-size: 200% 100%;
+}
+
 /* GRAPHICS */
 
 #graphics-center {
