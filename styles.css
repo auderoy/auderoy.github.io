@@ -149,3 +149,31 @@ nav a {
     font-weight: 300;
     text-align: justify;
 }
+
+.category {
+    margin-bottom: 0.75em;
+}
+
+.category-title {
+    font-family: 'Playfair Display', Serif;
+    font-size: 1.5em;
+}
+
+.category-title a {
+    text-decoration: none;
+    color: #55827A;
+    background-image: none;
+    background-origin: 0;
+    background-size: 0;
+    background-repeat: no-repeat;
+    background-position: 0;
+    transition: color 0.2s linear;  
+}
+
+.category-title a:hover {
+    color: black;
+}
+
+.category-desc {
+    margin-left: 1em;
+}
