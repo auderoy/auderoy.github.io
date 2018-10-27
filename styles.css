@@ -83,72 +83,11 @@ nav a {
     font-style: italic;
 }
 
-/* PORTFOLIO */
+/* CATEGORIES */
 
-/* Color scheme https://www.design-seeds.com/wander/wanderlust/color-view-99/ */
+/* Old color scheme https://www.design-seeds.com/wander/wanderlust/color-view-99/ */
 /* Hex to RGB https://www.webpagefx.com/web-design/hex-to-rgb/ */
 /* RGBA CSS https://www.w3schools.com/css/css3_colors.asp */
-
-.card {
-    margin: 0.5em;
-    padding: 1em;
-    height: 12em;
-    border: none;
-}
-
-.card-ux {
-    background-color: rgb(161,198,193,0.5);
-    transition: background-color 0.5s linear;
-}
-
-.card-ux:hover {
-    background-color: rgb(161,198,193,1);
-}
-
-.card-graphics {
-    background-color: rgb(236,220,185,0.5);
-    transition: background-color 0.5s linear;
-}
-
-.card-graphics:hover {
-    background-color: rgb(236,220,185,1);
-}
-
-.card-photos {
-    background-color: rgb(226,165,150,0.5);
-    transition: background-color 0.5s linear;
-}
-
-.card-photos:hover {
-    background-color: rgb(226,165,150,1);
-}
-
-.card-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.card-title {
-    font-family: 'Playfair Display', Serif;
-    font-size: 1.5em;
-}
-
-.card-text {
-    position: absolute;
-    bottom: 1em;
-    font-size: .8em;
-    font-weight: 300;
-    color: #A07B79;
-}
-
-#uxproj-desc {
-    font-style: italic;
-    font-size: 1.5em;
-    font-weight: 300;
-    text-align: justify;
-}
 
 .category {
     margin-bottom: 0.75em;
@@ -176,4 +115,11 @@ nav a {
 
 .category-desc {
     margin-left: 1em;
+}
+
+#uxproj-desc {
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: justify;
 }
