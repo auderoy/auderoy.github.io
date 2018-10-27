@@ -96,12 +96,12 @@ nav a {
 .category-title {
     font-family: 'Playfair Display', Serif;
     font-size: 1.5em;
-    letter-spacing: 0;
+    letter-spacing: normal;
     transition: letter-spacing 0.1s linear; 
 }
 
 .category-title:hover {
-    letter-spacing: 1em;
+    letter-spacing: 0.2em;
 }
 
 .category-title a {
