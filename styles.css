@@ -97,11 +97,11 @@ nav a {
     font-family: 'Playfair Display', Serif;
     font-size: 1.5em;
     letter-spacing: normal;
-    transition: letter-spacing 0.1s linear; 
+    transition: letter-spacing 0.1s ease-in; 
 }
 
 .category-title:hover {
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
 }
 
 .category-title a {
