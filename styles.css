@@ -31,7 +31,7 @@ img {
 
     /* Fade in on load https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
 
-    -webkit-animation: fadein .8s; /* Safari, Chrome and Opera > 12.1 */
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
          -o-animation: fadein 2s; /* Opera < 12.1 */
