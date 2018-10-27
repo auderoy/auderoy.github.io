@@ -106,11 +106,13 @@ nav a {
     background-size: 0;
     background-repeat: no-repeat;
     background-position: 0;
-    transition: color 0.2s linear;  
+    letter-spacing: 0;
+    transition: color 0.2s linear, letter-spacing 0.2s linear;  
 }
 
 .category-title a:hover {
     color: black;
+    letter-spacing: 0.5em;
 }
 
 .category-desc {
