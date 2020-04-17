@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- ............... HEAD ............... -->
+
+<head>
+
+<title>Audrey Lin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Responsive meta tag -->
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Roboto -->
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"> <!-- https://favicon.io/emoji-favicons -->
+
+<!-- CSS STYLES -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> <!-- IMPORT CSS FROM BOOTSTRAP -->
+<link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<style>
+h2 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+h3 {
+	font-size: 1.25em;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+</style>
+
+<!-- ............... BODY ............... -->
+
+<body style="text-align: justify;">
+
+<!-- ............... CONTENT ............... -->
+
+<div class="container col-md-8" style="padding: 4em 0 1.5em;">
+<div class="home"><a href="../index.html">audrey lin</a></div>
+<div class="blurb">
+  <p>freelance photographer & digital content creator</p>
+  <!--<p>telling stories through design, writing, and photography</p>-->
+  <p>philadelphia, pa</p>
+</div>
+</div>
+
+<div class="container col-md-8" style="padding-bottom: 1em;">
+<div class="chapter">
+  <div class="chapter-title">QlikView</div>
+
+<p>One of the City of Austin Fire Department's most-used application is QlikView, their web-based Business Intelligence (BI) system, which provides analytics and reporting. BI enjoys very high user adoption—an unusual and remarkable success when compared with typical BI implementations. However, the most-used BI application—the "Battalion Chief/Company Dashboard"—has been in use without a facelift since 2008.</p>
+
+<p>How might we increase the usefulness and usability of the BI visualisations included in this app?</p>
+
+<p><iframe src="../files/qlikview.pdf"></iframe></p>
+
+<p><div class="capt">Business Intelligence at City of Austin Fire Department</br>Supervised by Elizabeth Gray, Information System & Business Enterprise Manager</div></p>
+
+<h2>Background</h2>
+
+<p>QlikView apps are a data visualisation tool. More apps are published as people continue to request certain data, but old apps are not updated. Furthermore, user value has not been measured as pushing out new apps has been prioritised over seeking user feedback on existing apps.</p>
+
+<h2>Users</h2>
+
+<p>Over the course of two weeks, I drove out to stations and interviewed ten people about their QlikView usage. The majority of the people I conducted interviews with were users who worked in operations, including firefighters, lieutenants, captains, and battalion chiefs.</p>
+
+<h2>Method</h2>
+
+<p>During my one-on-one interviews, I asked users which apps they used most and had them guide me through how they used them whilst thinking aloud and explaining their reasons for doing so in that way.</p>
+
+<h2>Results</h2>
+
+<h3>What works</h3>
+
+<p>The most popular apps were the BC dashboard, HR dashboard, and Seniority apps; the BC dashboard provides most of the information users need on the daily, and the HR dashboard and Seniority apps are mostly used out of curiousity, for example to figure out promotions and vacation selection. They are also the apps that most users have permissions to view.</p>
+
+<p>The BC dashboard is mainly for battalion chiefs, who use the app to cross-check data for data quality. However, lower ranking ops also check the BC dashboard often to see what the higher ups see and stay off their radar.</p>
+
+<p>To manipulate data visualisations on the front-end, users can manipulate the left sidebar selectors. A common use of this feature is to see if there's any data missing, for example indicated in bright red in inspections, or shown as missing in CE completions. Users found this function intuitive and it is the main way they interact with the app.</p>
+
+<h3>What doesn't work</h3>
+
+<p>However, that is the extent to which users understand how to use the apps. They miss the full capabilities of the apps, not realising how much they can customise on the front-end to personalise visualisations. Developers regard this feature as powerful, and users don't realise it exists.</p>
+
+<p>Ops don't have the same technological intuitions as people in headquarters or the common technology user. If they have free time, they don't use it to play around with apps and discover new features, but rather use it to train and prepare to save lives. For example, they don't have the intuition to check out the Read Me tabs if they have questions, thinking that that's a note for developers rather than users. They get confused by the browser toolbar, app toolbar, and app navigational tabs, sometimes refreshing the whole browser in order to view a previous page that could have been navigated to within the app.</p>
+
+<p>Users don’t know what’s available to them. They’ve done things their own way and will continue doing it that way until someone shows them otherwise. Even certain features that are located front and center are completely overlooked, such as the turnout time box chart on the BC dashboard. However, once learned, their retention is promising.</p>
+
+<h2>Recommendations</h2>
+
+<p>Not a single person I interviewed received training for QlikView, whereas I spent my first morning at AFD headquarters doing online QlikView training. Users need to learn what is available and how to use it. Thus, the two main focuses should be exposure and training. Introducing tech options early in the career is critical. It could be helpful to have a definitive guide that indicates which ranks have what responsibilities, which tools are available to aid them with those responsibilities, and teach them how to use those tools.</p>
+
+<p>Another aspect that could aid the learning process is to work on consistency between the different apps, i.e. background colours, toolbar icons and functionalities, logo placement. All the apps are developed by a team of developers who do not have a shared style guide. Creating a design standard and sticking to it can speed up the development process and also help users know what to expect and learn how to use the apps more efficiently and effectively.</p>
+
+<p>Some low-hanging fruit to take care of are creating a visualisation for physicals like there is for CE completions, add a filter by engine (rather than by station, like it currently is), and to allow users to view total runs in their career.</p>
+
+</div>
+</div>
+
+<!-- ............... END CONTENT ............... -->
+
+<!-- ............... IMPORT JS FROM BOOTSTRAP ............... -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+</body>
+
+<div style="z-index:99999999999999999999; position:fixed; top:1em; right:1em; ">
+  <a href="https://www.linkedin.com/in/audrey-lin/" target="_blank" style="padding-right: 1em; background-image: none;"><i class="fa fa-linkedin"></i></a> <a href="mailto:auderoylin@gmail.com?Subject=Hello%20from%20your%20website" target="_top" style="padding-right: 1em; background-image: none;"><i class="fa fa-envelope"></i></a>
+</div>
+
+</html>
