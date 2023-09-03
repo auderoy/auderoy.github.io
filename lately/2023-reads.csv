@@ -1,4 +1,4 @@
-Title,Author,Length,Width,Height,Pages,Color
+Title,Author,Length,Width,Height,Pages,Color,Favorite
 Legends & Lattes,Travis Baldree,8.25,5.35,0.8,294,#4b331c
 Bliss Montage,Ling Ma,7.8,5.5,1.05,228,#91337f
 And Then There Were None,Agatha Christie,8,5.36,0.7,247,#918783
@@ -6,14 +6,14 @@ Y/N,Esther Yi,8.56,5.84,0.8,224,#000000
 The Deal,Elle Kennedy,8.25,5.5,1,360,#9dd6c6
 The Secret History,Donna Tartt,8.01,5.19,1.02,559,#000000
 Central Places,Delia Cai,9.52,6.37,1.04,288,#f0ee69
-Better than the Movies,Lynn Painter,8.25,5.5,1,356,#76c4e6
+Better than the Movies,Lynn Painter,8.25,5.5,1,356,#76c4e6,Yes
 5 Centimeters per Second,Makoto Shinkai,7.48,5.5,1.43,463,#3658a9
 A Stone is Most Precious Where it Belongs,Gulchehra Hoja,9.3,6.4,1.35,320,#84c6e6
 Tiny Moons,Nina Mingya Powles,7.8,5.08,0.28,92,#c8e7e9
 The Keeper of Night,Kylie Lee Baker,8,5.26,0.97,393,#000000
 King of Wrath,Ana Huang,8.5,5.5,1.04,416,#eeeeee
-Seven Days in June,Tia Williams,9.25,6.5,1.5,336,#0e049b
-Tomorrow and Tomorrow and Tomorrow,Gabrielle Zevin,9.53,6.48,1.4,401,#1bc6e0
+Seven Days in June,Tia Williams,9.25,6.5,1.5,336,#0e049b,Yes
+Tomorrow and Tomorrow and Tomorrow,Gabrielle Zevin,9.53,6.48,1.4,401,#1bc6e0,Yes
 The Score,Elle Kennedy,8.25,5.5,0.96,361,#e3cbe6
 Walking Practice,Dolki Min,8.25,5.5,0.65,176,#000000
 You Made a Fool of Death with Your Beauty,Akwaeke Emezi,8.25,5.31,0.7,312,#ea86a2
@@ -23,11 +23,11 @@ Sirens & Muses,Antonia Angress,9.6,6.41,1.2,368,#8c9248
 Twisted Love,Ana Huang,8.5,5.5,0.88,352,#c7dbeb
 Twisted Games,Ana Huang,8.5,5.5,1.12,448,#e5ddd0
 Twisted Hate,Ana Huang,8.5,5.5,1.28,551,#ecada0
-The Kind Worth Killing,Peter Swanson,8,5.31,0.72,415,#000000
+The Kind Worth Killing,Peter Swanson,8,5.31,0.72,415,#067362
 The Phantom of the Opera,Gaston Leroux,9,6,0.59,304,#000000
 The Stationery Shop,Marjan Kamali,8.38,5.63,0.84,336,#205175
 The Cat Who Saved Books,Sosuke Natsukawa,8,5.31,0.47,208,#a79f82
-The Luminaries,Susan Dennard,9.55,6.55,1.2,304,#000000
+The Luminaries,Susan Dennard,9.55,6.55,1.2,304,#1b1f0e
 Walking Practice,Dolki Min,8.25,5.5,0.65,176,#000000
 Ripe,Sarah Rose Etter,8.38,5.5,1.1,288,#5f0912
 Boy Parts,Eliza Clark,8,5.31,0.66,304,#000000
