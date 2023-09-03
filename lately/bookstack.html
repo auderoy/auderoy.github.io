@@ -74,25 +74,15 @@
               const length = parseFloat(values[properties.indexOf('Length')]);
               const pages = parseFloat(values[properties.indexOf('Pages')]);
               const color = values[properties.indexOf('Color')].trim();
-              const imagePath = `spines/${title.replace(/[ ,.!?]+/g, '').toLowerCase()}.jpg`; 
 
               const dataContainer = document.querySelector('.data-container');
               const box = document.createElement('div');
-
-              const image = new Image();
-              image.src = imagePath;
-              image.onload = () => {
-                image.style.width = `${length*20}px`;
-                box.appendChild(image);
-              };
-              image.onerror = () => {
-                box.textContent = title;
-                box.className = 'box';
-                box.style.width = `${length*20}px`;
-                box.style.height = `${pages/10}px`;
-                box.style.backgroundColor = color;
-                dataContainer.appendChild(box);
-              };
+              box.textContent = title;
+              box.className = 'box';
+              box.style.width = `${length*20}px`;
+              box.style.height = `${pages/10}px`;
+              box.style.backgroundColor = color;
+              dataContainer.appendChild(box);
           });
       })
       .catch(error => console.error('Error reading CSV file:', error));
