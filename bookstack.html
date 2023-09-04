@@ -14,7 +14,7 @@
 
 <!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"> <!-- https://favicon.io/emoji-favicons -->
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> <!-- https://favicon.io/emoji-favicons -->
 
 <!-- CSS STYLES -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> <!-- IMPORT CSS FROM BOOTSTRAP -->
@@ -56,6 +56,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
+<!--
 <script>
   fetch('https://auderoy.github.io/files/2023-reads.csv')
     .then(response => response.text())
@@ -80,6 +81,51 @@
       });
     })
     .catch(error => console.error('Error reading CSV file:', error));
+</script>
+-->
+
+<script>
+  fetch('https://auderoy.github.io/files/2023-reads.csv')
+    .then(response => response.text())
+    .then(data => {
+      const [header, ...rows] = data.split('\n');
+      const properties = header.split(',');
+      rows.reverse();
+      const spineImgContainer = document.querySelector('.spine-img-container');
+      const imageUrls = [];
+      rows.forEach(row => {
+        const values = row.split(',');
+        const title = values[properties.indexOf('Title')].trim();
+        const length = parseFloat(values[properties.indexOf('Length')]);
+        const imagePath = `files/spines/${title.replace(/[ ,.!?]+/g, '').toLowerCase()}.jpg`;
+        imageUrls.push({ path: imagePath, length });
+      });
+      loadImagesSequentially(imageUrls, spineImgContainer);
+    })
+    .catch(error => console.error('Error reading CSV file:', error));
+  function loadImagesSequentially(imageUrls, container) {
+    let index = 0;
+    function loadNextImage() {
+      if (index < imageUrls.length) {
+        const imageInfo = imageUrls[index];
+        const image = new Image();
+        image.src = imageInfo.path;
+        image.className = 'spine-img';
+        image.onload = () => {
+          image.style.width = `${imageInfo.length * 22}px`;
+          container.appendChild(image);
+          index++;
+          loadNextImage();
+        };
+        image.onerror = () => {
+          console.error(`Error loading image: ${image.src}`);
+          index++;
+          loadNextImage();
+        };
+      }
+    }
+    loadNextImage();
+  }
 </script>
 
 <script>
