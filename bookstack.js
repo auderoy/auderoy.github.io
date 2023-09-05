@@ -54,7 +54,7 @@ function loadImagesSequentially(imageUrls, container) {
       image.src = imageInfo.path;
       image.className = 'spine-img';
       image.onload = () => {
-        image.style.width = `${imageInfo.length * 40}px`; /*Lx40 or Lx22*/
+        image.style.width = `${imageInfo.length * 30}px`; /*Lx30 or Lx22*/
         container.appendChild(image);
         index++;
         loadNextImage();
@@ -64,8 +64,8 @@ function loadImagesSequentially(imageUrls, container) {
         const box = document.createElement('div');
         box.textContent = imageInfo.title;
         box.className = 'box';
-        box.style.width = `${imageInfo.length*40}px`; /*Lx40 or Lx20*/
-        box.style.height = `${imageInfo.pages/8}px`; /*L/8 or L/15*/
+        box.style.width = `${imageInfo.length*30}px`; /*Lx30 or Lx20*/
+        box.style.height = `${imageInfo.pages/10}px`; /*L/10 or L/15*/
         box.style.backgroundColor = imageInfo.color;
         container.appendChild(box);
         index++;
