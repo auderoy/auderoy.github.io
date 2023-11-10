@@ -1,0 +1,45 @@
+﻿RECAP (SENTIMENT BY ENGAGEMENT)
+
+
+* As Dan mentioned, our first analytical approach was sentiment analysis. There are tons of thought pieces out there about whether social media thrives off of conflict, and whether it contributes to polarization on the internet, so we wanted to see if tweets with high engagement might exhibit more polarized sentiment. To test this, we utilized SentiStrength and divided our data into three subsets by retweet count.
+* However, we found that the mean sentiment of each subset tended toward neutrality, or in other words, regardless of level of engagement, each subset tended toward neutrality.
+* Furthermore, though the difference is slight, the mean sentiment of the top engagement tweets was technically the closest to 0 of the three categories, which goes against our initial hypothesis. This initial exploration showed us that we would have to apply sentiment analysis to smaller and more specifically defined subsets of data.
+
+
+COLLECTED MORE DATA
+
+
+* In total, we scraped approximately 16 million tweets and ran SentiStrength on every single tweet, which took almost a week but thankfully we only had to run it once, and it allowed us to split our data in multiple ways without having to rerun SentiStrength every time.
+
+
+SENTIMENT BY DAY
+
+
+* The first way we split our data was by date. Similar to our results from splitting our data by engagement, we did not find much variation in sentiment, and the mean sentiment for each category was just below 0 on a scale from -4 to 4. That said, if we zoom in on the scale, we can see slight fluctuations in sentiment, with one prominent dip, relatively speaking. As you might guess, that dip occurs on Feb 24, when Russia declared war on Ukraine.
+* Taking a closer look at the tweets on that day with negative sentiment, it’s interesting to see a range of different things being expressed, despite the fact that all of these tweets share a sentiment score of -4. My personal favorite is the fourth tweet, which expresses a sense of doom but with some humor.
+
+
+CROSS-ANALYSIS
+
+
+* The next way we split our data was by topic. For our midterm, we approached our analysis by sentiment analysis and topic modeling separately, but for our final, we wanted to not only continue to explore these approaches more deeply, but actually bring them together and see whether we could glean more insights that way.
+* With this approach, we selected subsets of data representing each topic cluster depending on whether or not they contained keywords from that cluster.
+* As you can see, there are some common words like “ukraine,” “ukrainian,” “russia,” “russian,” some other repeated keywords, and some keywords that don’t have much meaning like prepositions and conjunctions. These keywords were not used for the selection of our subsets so that the different subsets would be better distinguished from one another.
+* Then, before we calculated the mean sentiment for each subset, we removed tweets with duplicate text, because the sentiment for those duplicate tweets would be the same. That said, a different approach could be to keep the duplicate tweets in order to amplify a shared sentiment.
+
+
+SENTIMENT BY TOPIC
+
+
+* Our topic modeling from the midterm used both 5 topic clusters and 7 topic clusters, so for our cross-analysis, we also selected our subsets by 5 topic clusters per week and 7 topic clusters per week.
+* Our topic modeling from the midterm used both 5 topic clusters and 7 topic clusters, so for our cross-analysis, we selected subsets of data representing both sizes of topic clusters. Each graph represents one week, and each bar represents the mean sentiment of one of the cluster topics from that week. On the left, we have 5 topic clusters per week, and on the right, we have 7 topic clusters per week. It’s a lot to look at, so what we did next was get the mean sentiment for each week (as in, the mean sentiment for each graph you see here), representing all the graphs on the left in one graph, and all the graphs on the right in another graph.
+* The difference here might look drastic but it’s important to note that the range in sentiment is only around 0.1. That said, it does seem like there is a slight downward trend in the dataset we split by 7 cluster topics. Again, we can’t say anything conclusive about 7 topic clusters and 5 weeks, but it is validating to see that there is a difference in results when we split our dataset in different ways. At the same time, it shows the responsibility that data scientists hold in selecting subsets of data and what a difference it can make. What the graph on the right means is unknown, but we can take a closer look at our 7 topic cluster subsets.
+* Longer bars convey more negative mean sentiment in particular topics, and the mean sentiment of one of these topics actually surpasses -1, which is really exciting for us, because so far our subsets have only revealed mean sentiment scores between 0 and -1.
+* Taking a look at the keywords defining this subset, it seems like they have something to do with attacks, places that have been attacked, and the means by which they’ve been attacked.
+* Taking a closer look at the tweets from that topic, we can see that there is only one tweet with a sentiment score of 4, and it’s a rather emotive tweet, especially compared to the tweets with a sentiment score of 0. These tweets are more informative than emotive and read like news summaries, which gives some validation to the sentiment scores derived from SentiStrength.
+
+
+CONCLUSION
+
+
+* Our analysis is far from comprehensive, but from these few examples, we can see the impact of choosing different subsets of data.

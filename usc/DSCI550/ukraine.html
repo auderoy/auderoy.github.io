@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- ............... HEAD ............... -->
+
+<head>
+
+<title>Slava Ukraini!</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Responsive meta tag -->
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Roboto -->
+
+<!-- CSS STYLES -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> <!-- IMPORT CSS FROM BOOTSTRAP -->
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<!-- ............... BODY ............... -->
+
+<body>
+
+<!-- ............... CONTENT ............... -->
+
+<div class="container col-lg-12" style="padding: 6em 1em 4em; text-align:center;">
+  <h1 style="font-weight:700">Visualizing the Russo-Ukrainian War</h1>
+  <p>By Alex DongHyeon Seo, Andy Xiang, Audrey Lin, Elena Pilch, Matthew Fishman, Sarah Hsuan Chu</p>
+</div>
+
+
+<div style="background-color:#E8E8E8;">
+<div class="container col-lg-4" style="padding: 4em 1em; font-weight:300; font-size:1.5em;">
+  <p>On February 24, 2022, Russia declared war on Ukraine. Name entities related to the Russo-Ukrainian War were extracted from screenshots of Aljazeera, CNN, and Fox throughout March 2022.* A dynamic bubble map was created using our results.</p>
+  <p style="font-size:.5em">* Data from Aljazeera include March 1-30, from CNN include March 1-31, from Fox include March 12-31.</p>
+</div>
+</div>
+
+<div class="container col-lg-6" style="padding: 6em 1em 0;">
+  <h2 style="text-align:center">The data</h2>
+  <p>The 81 screenshots in our dataset were too large to directly perform OCR, but cropping them vertically at 1000px increments into 4164 images was simple, and performing OCR was a straightforward process thereafter. The cropped images for one image were saved to one folder, then the extracted text for each image in one folder was appended to one text file (81 text files total). It took approximately 30 minutes to run.</p>
+  <p>Processing the extracted text was a more involved process. Not only did we have to contend with varied content structure from three different news sources, but we also had to contend with the varied success of what content was captured through OCR. As such, our code includes several contingencies that seem repetitive at first but are necessary to handle OCR errors. The results are imperfect but effective.</p>
+  <p>Text processing involved removing headers and footers (which handled some ads and most menus and branding elements), other menus, newsletter signups, recurring ads, asides for related articles, post metadata (i.e. author, date/time of publication), embedded Twitter metadata, and placeholder text like “Read more here.” This took care of most appearances of the names of the news sources that were not mentioned in the actual content of the articles, but those names still appeared very frequently. Post metadata was removed so that those names, dates, and times wouldn’t be mixed up with those mentioned in the actual content of the articles. Ad text was varied but patterned and thus identifiable, but the challenge was that the ad text wasn’t captured very well through OCR compared to plain text on a white background (article text). Dealing with ads was the most difficult part of text processing.</p>
+</div>
+
+<div class="container col-lg-6" style="padding: 4em 1em 0;">
+  <h2 style="text-align:center">Entity distribution</h2>
+  <p>Name entities extracted from news sources include real and fictional people; nationalities, religious, and political groups; buildings, airports, highways, bridges, etc.; organizations, companies, agencies, institutions, etc; geopolitical regions, countries, cities, states; non-geopolitical locations, mountain ranges, bodies of water; products, objects, vehicles, foods, etc.; events, named hurricanes, battles, wars, sports events, etc.; absolute or relative dates or periods; times smaller than a day.</p>
+  <p>Only the data from March 12-30 (dates shared by all news sources in our dataset) are used to compare entity distributions between news sources.</p>
+</div>
+
+<div class="container col-lg-10" style="padding: 1em;">
+  <img src="viz/person.png" width=100%>
+</div>
+
+<div class="container col-lg-6" style="padding: 0em 1em 0;">
+  <h3>People</h3>
+  <p>Volodymyr Zelensky (200+ mentions per source), Vladimir Putin (200+), and Joe Biden (100+) were the three most frequently mentioned people across all three news sources. That said, Joe Biden was mentioned half as often by Aljazeera (100+) than CNN or Fox (200+).</p>
+  <p>The mentions of other people hovered around 20 per person across all three news sources. U.S. Secretary of State Antony Blinken and U.K. Prime Minister Boris Johnson were top mentions across all three news sources. U.S. Assistant to the Secretary of Defense for Public Affairs John Kirby was a top mention by CNN and Fox but not Aljazeera. Aljazeera had several unique top mentions including Russian oligarch Roman Abramovich, Russian Minister of Foreign Affairs Sergey Lavrov, Ukrainian Deputy Prime Minister Iryna Vershchuk, and Turkish President Recep Tayyip Erdogan. Since Aljazeera is a Middle Eastern organization, it is unsurprising that there are relatively fewer mentions of U.S. leaders. Fox was the only source that frequently mentioned Chinese President Xi Jinping. Although post metadata was removed, some journalists appeared in the top mentions as well, but it is possible that some of those journalists were in fact mentioned in the actual content of the article.</p>
+  <p>The Ukrainian cities Kharkiv, Luhansk, Lviv, and Mariupol were misclassified as people.</p>
+</div>
+
+<div class="container col-lg-10" style="padding: 1em;">
+  <img src="viz/nationality.png" width=100%>
+</div>
+
+<div class="container col-lg-6" style="padding: 0em 1em 0;">
+  <h3>Nationalities</h3>
+  <p>Russian and Ukrainian were the two most frequently mentioned nationalities across all three news sources by far. American was the third most frequently mentioned nationality by CNN and Fox; American political parties appeared in the top mentions as well. Meanwhile, American was one of the least frequent top mentions by Aljazeera. Rather, Aljazeera’s third most frequent mention appeared evenly distributed between British, European, French, and Polish.</p>
+  <p>Biden and Instagram were misclassified as nationalities. Zaporizhzhia seems to be a misclassification as well, which could refer to the Ukrainian city and/or nuclear power plant; it appears as a top mentioned nationality by CNN and Aljazeera, and Zaporizhzhia Oblast appears as a top mentioned location by Fox.</p>
+</div>
+
+<div class="container col-lg-10" style="padding: 1em;">
+  <img src="viz/organization.png" width=100%>
+</div>
+
+<div class="container col-lg-6" style="padding: 0em 1em 0;">
+  <h3>Organizations</h3>
+  <p>Although most branding elements and post metadata were removed during text processing, the names of news sources still appeared in the top mentions for each respective news source. It is possible that the names of these organizations were in fact mentioned in the article content, such as generically referring to their own staff, but perhaps not to the extent our graphs depict. While the news sources do not refer to each other in their articles (at least not frequently), news sources that do appear include Reuters and the Associated Press. Non-traditional news sources that appear include Facebook and Telegram. Currently, Telegram is playing a critical role in information warfare among Ukrainians and Russians looking for uncensored Ukrainian news (<a href="https://www.nytimes.com/2022/04/16/world/europe/russian-propaganda-telegram-ukraine.html">New York Times</a>). Interestingly, it does not appear as a top mention for Fox as it does for both CNN and Aljazeera. On the other hand, Fox is the only one that frequently mentions the Associated Press.</p>
+  <p>As we observed with person names, the top organizations mentioned by CNN and Fox seem to be more U.S.-centric than Aljazeera. International bodies such as IAEA, ICRC, Kremlin, the EU, and the UN are more frequently mentioned by Aljazeera than CNN and Fox.</p>
+  <p>NATO stands out as a top mention across all three news sources.</p>
+</div>
+
+<div class="container col-lg-10" style="padding: 1em;">
+  <img src="viz/geopolitical.png" width=100%>
+</div>
+
+<div class="container col-lg-6" style="padding: 0em 1em 0;">
+  <h3>Geopolitical regions</h3>
+  <p>Given the topic of the Russo-Ukrainian War, it is only logical that Russia and Ukraine are the most frequently mentioned places across all three news sources. Top mentions within Ukraine include Chernobyl, Donbas, Donetsk, Kyiv, Lviv, and Mariupol (varies between news sources). Top mentions across all three news sources include Brussels, Chernobyl, China, Germany, Kyiv, Mariupol, Moscow, Poland, Turkey, UK, and US.</p>
+  <p>Biden and Macron were misclassified as geopolitical regions.</p>
+</div>
+
+<div class="container col-lg-10" style="padding: 1em;">
+  <img src="viz/location.png" width=100%>
+</div>
+
+<div class="container col-lg-6" style="padding: 0em 1em 0;">
+  <h3>Non-geopolitical locations</h3>
+  <p>Europe and Kyiv were the most frequently mentioned locations across all three news sources, followed by the West. However, “West” is an ambiguous term that likely encompasses references to western organizations, western regions of Ukraine and Russia, Russian soldiers moving west, etc, so inferences cannot be made without further research. One small detail we noticed was that Fox did not frequently mention Africa, Asia, and Berdyansk compared to CNN and Aljazeera.</p>
+</div>
+
+<div class="container col-lg-10" style="padding: 4em 0;">
+  <h2 style="text-align:center;">World map</h2>
+  <embed src="viz/world_map.html" style="width:100%; height:600px;"> 
+</div>
+
+<div class="container col-lg-10" style="padding: 0em 0;">
+  <h2 style="text-align:center">Ukraine map</h2>
+  <embed src="viz/ukr_map.html" style="width:100%; height:600px;">    
+</div>
+
+<div class="container col-lg-6" style="padding: 4em 1em 4em;">
+  <p>Our dynamic bubble map is weighted by frequency, color coded by news source, and toggled by date. To streamline our geoparsing and use the Nominatim API as efficiently as possible, we identified the features we’d need for our dynamic maps, allowing us to add our geoparsed data directly to a dataframe. The features include: Entity, Entity Type, Year, Month, Day, Latitude, Longitude, Country, City, News Source.</p>
+  <p>Although geoparsing was not difficult, performance was poor. With our data organized in a dataframe, it became clear that we would need to do a fair amount of data cleaning. Some issues arose due to the geoparser (i.e. identifying ambiguous place names like “Georgia” in the States and “West” in Kenya, identifying a specific city to represent an entire country/continent/region like coordinates in Kansas for “United States,” identifying different coordinates for one place if the name of the place was the slightest bit varied like “United States,” “the United States,” “U.S.”), but some of these issues were carried forward from earlier on in the workflow. For example, during NER, “Ukrainian,” “Zelensky,” “Biden,” and “Macron,” were incorrectly identified as places although they refer to people, and incorrect OCR resulted in varied spelling of the same entity, which resulted in different geoparsed results despite referring to the same entity.</p>
+  <p>After data cleaning, we implemented a dynamic bubble map with Mapbox. For the world map, we used a pivot table to aggregate bodies of water and countries. Entities referring to entire continents were not used. For a more nuanced representation of each country, instead of plotting a country with a point at its center, we used the mean latitude and longitude of cities mentioned from that country. For instance, if most of the cities mentioned from one country are towards the western region, the aggregated point will be located closer to the western region. For the Ukraine map, we selected entities from Ukraine (Country = Ukraine), removed entities referring to the entire country (Entity = Ukraine), then used a pivot table to aggregate the remaining entities similarly (mostly cities, but some bodies of water too).</p>
+  <p>The map glitched for news sources that didn’t have data on a particular day (March 1-11 for Fox, March 31 for Aljazeera), so we had to add extra rows to our dataframe for those news sources on those days. We input values for the News Source, Day, Entity, and Country but left the other features (particularly Latitude and Longitude) blank so that they wouldn’t be plotted on the map, since there is in fact no data for those instances.</p>
+</div>
+
+
+<div style="background-color:#E8E8E8;">
+<div class="container col-lg-6" style="padding: 4em 1em 10em; font-weight:300; font-size:1.5em;">
+  <h2 style="text-align:center">Discussion</h2>
+  <p>All three news outlets frequently mentioned Russia, Ukraine, and their respective leaders. Other geopolitical regions and non-geopolitical locations did not have obvious variations between news sources either. However, more variations appear from analyzing the people, nationalities, and organizations mentioned; in terms of those entities, CNN and Fox reveal a more U.S.-centric perspective than Aljazeera.</p>  
+</div>
+</div>
+
+<!-- ............... END CONTENT ............... -->
+
+</body>
+
+</html>

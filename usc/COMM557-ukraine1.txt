@@ -1,0 +1,29 @@
+﻿Data cleaning
+
+
+* After collecting our data, we prepped it for analysis with some data cleaning. For our first analysis on sentiment analysis with SentiStrength, text processing wasn’t needed because the program takes care of that automatically. But we did need to clean our data for our second analysis, and regardless, we wanted to clean it for usability and versatility for any other future analyses our research might lead us to. (:30)
+
+
+Descriptive statistics
+
+
+* Our preliminary dataset consisted of approximately 1 million tweets from Feb 18-Feb 25, filtered down to 200k unique tweets, and the median retweet count was 40 retweets with a standard deviation of 11k. (:15)
+
+
+Sentiment Analysis
+
+
+* We used these statistics to partition our dataset into high engagement tweets and low engagement tweets, since we’re interested in whether there’s a difference that distinguishes them, and we also wanted to distinguish outliers as well, which we categorized as top tweets.
+* So low engagement tweets are considered as those with less than 40 retweets, high engagement tweets are those with 40 to 10k retweets, and top tweets are those with over 10k retweets. Then we ran SentiStrength, which took 24 hours. (:30)
+
+
+* To see a distribution of the sentiment, here are the same numbers as percentages. At a glance we can see that all categories tend toward neutrality. We had hoped that by partitioning our dataset into these three categories, our analysis could produce insightful results, but evidently these categories are still way too broad. But regardless, this was a helpful first step to explore and get familiar with our data. (:25)
+
+
+* For example, this is a sample of our output from SentiStrength, and you can see the individual sentiment scores on the right. Some immediate observations we made about the text data and corresponding sentiment scores were the limitations of media types available for data collection. From a closer look at the first tweet on the slide we can infer that a photo holds much of the context for the tweet since it it says “Here’s a guide,” and in the third tweet on the slide we can infer that a video holds much of the context for the tweet since it tells you to listen to a speech. (:35)
+* It’s kind of hard to see, so here are the first three tweets from the previous slide screenshotted from Twitter. Unfortunately, without greater access from the API, photo and video data is not available to us. Another observation we made from looking at that first tweet on the slide is how SentiStrength’s automatic text processing and removal of punctuation can make it difficult to detect the sarcasm indicated by those quotation marks around “accidentally.”
+* But if you look at the original tweet with the photo, you can see that the tweet is actually kind of funny, even though SentiStrength rated it -1 on a scale from -4 to 4, and it would seem that people are receptive to this tweet too since it’s a top tweet from our dataset. So those are just some considerations to keep in mind as we continue to use SentiStrength. (:45)
+* Here are samples from high engagement tweets and low engagement tweets that we don’t have time to get into, but in summary, as expected, the mean sentiment of our dataset tends toward neutrality for all three categories and is just the slightest bit negative, which is unsurprising given the topic of war. To yield more insightful results, we plan to apply sentiment analysis to more specifically defined subsets of data, and are exploring identifying those subsets by topic, which leads us into topic classification and topic modeling. (:30)
+
+
+Thank you! We’d love to answer any questions about our project, and we’d also love to hear about any questions or aspects about the war that you’re interested in for us to track over time, since we’re in a unique position of having collected data from the days leading up to the war to now. (:20)
