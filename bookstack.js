@@ -39,7 +39,7 @@ fetch('https://auderoy.github.io/files/2023-reads.csv')
       const length = parseFloat(values[properties.indexOf('Length')]);
       const pages = parseFloat(values[properties.indexOf('Pages')]);
       const color = values[properties.indexOf('Color')].trim();
-      const imagePath = `files/spines/${title.replace(/[ ,.!?/]+/g, '').toLowerCase()}.jpg`;
+      const imagePath = `files/spines/${title.replace(/[ ,.!?:/]+/g, '').toLowerCase()}.jpg`;
       imageUrls.push({ path: imagePath, title, length, pages, color });
     });
     loadImagesSequentially(imageUrls, spineImgContainer);
