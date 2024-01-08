@@ -1,5 +1,5 @@
 /*
-fetch('https://auderoy.github.io/files/2023-reads.csv')
+fetch('https://auderoy.github.io/books/2023.csv')
   .then(response => response.text())
   .then(data => {
     const [header, ...rows] = data.split('\n');
@@ -10,7 +10,7 @@ fetch('https://auderoy.github.io/files/2023-reads.csv')
       const values = row.split(',');
       const title = values[properties.indexOf('Title')].trim();
       const length = parseFloat(values[properties.indexOf('Length')]);
-      const imagePath = `files/spines/${title.replace(/[ ,.!?]+/g, '').toLowerCase()}.jpg`;      
+      const imagePath = `spines/${title.replace(/[ ,.!?]+/g, '').toLowerCase()}.jpg`;      
       const image = new Image();
       image.src = imagePath;
       image.className = 'spine-img';
@@ -25,7 +25,7 @@ fetch('https://auderoy.github.io/files/2023-reads.csv')
 */
 
 /* SPINE IMAGES + SOLID COLORED SPINE PLACEHOLDER */
-fetch('https://auderoy.github.io/files/2023-reads.csv')
+fetch('https://auderoy.github.io/books/2023.csv')
   .then(response => response.text())
   .then(data => {
     const [header, ...rows] = data.split('\n');
@@ -39,7 +39,7 @@ fetch('https://auderoy.github.io/files/2023-reads.csv')
       const length = parseFloat(values[properties.indexOf('Length')]);
       const pages = parseFloat(values[properties.indexOf('Pages')]);
       const color = values[properties.indexOf('Color')].trim();
-      const imagePath = `files/spines/${title.replace(/[ ,.!?:/]+/g, '').toLowerCase()}.jpg`;
+      const imagePath = `spines/${title.replace(/[ ,.!?:/]+/g, '').toLowerCase()}.jpg`;
       imageUrls.push({ path: imagePath, title, length, pages, color });
     });
     loadImagesSequentially(imageUrls, spineImgContainer);
@@ -77,7 +77,7 @@ function loadImagesSequentially(imageUrls, container) {
 }
 
 /* SOLID COLORED SPINE PLACEHOLDER */
-fetch('https://auderoy.github.io/files/2023-reads.csv')
+fetch('https://auderoy.github.io/books/2023.csv')
   .then(response => response.text())
   .then(data => {
     const [header, ...rows] = data.split('\n');
